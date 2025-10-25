@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">proyectoEmpleosCR</string>
+    <string name="ErrorMsgAdd">Error al agregar info</string>
+    <string name="ErrorMsgUpdate">Error al actualizar info</string>
+    <string name="ErrorMsgRemove">Error al eliminar la info</string>
+    <string name="ErrorMsgGetAll">Error al obtener todo</string>
+    <string name="ErrorMsgGetById">Error al obtener un ID específico</string>
+    <string name="MsgDataNoFound">El dato no ha sido encontrado</string>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">proyectoEmpleosCR</string>
+    <string name="ErrorMsgAdd">Error when adding te information</string>
+    <string name="ErrorMsgUpdate">Error when updating the information</string>
+    <string name="ErrorMsgRemove">Error when removing the information</string>
+    <string name="ErrorMsgGetAll">Error when getting the all info</string>
+    <string name="ErrorMsgGetById">Error when getting the specific ID</string>
+    <string name="MsgDataNoFound">The data no found</string>
+</resources>
