@@ -17,9 +17,9 @@ object JobDataManager: JobManager {
     }
 
     //Update
-    override fun update(person: Job) {
-        remove(person.ID)
-        add(person)
+    override fun update(job: Job) {
+        remove(job.ID)
+        add(job)
     }
 
     //Get all the information

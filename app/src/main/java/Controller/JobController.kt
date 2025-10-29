@@ -8,7 +8,7 @@ import cr.ac.utn.proyectoempleoscr.R
 
 class JobController {
 
-    private var data: JobManager = JobDataManager
+    private var Jobdata: JobManager = JobDataManager
 
     private var context: Context
 
@@ -18,7 +18,7 @@ class JobController {
 
     fun addJob(job: Job){
         try {
-            data.add(job)
+            Jobdata.add(job)
         } catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgAdd))
         }
@@ -26,7 +26,7 @@ class JobController {
 
     fun updateJob(job: Job){
         try {
-            data.update(job)
+            Jobdata.update(job)
         } catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgUpdate))
         }
@@ -34,7 +34,7 @@ class JobController {
 
     fun getById(id: String): Job{
         try {
-            val result = data.getById(id)
+            val result = Jobdata.getById(id)
             if(result==null){
                 throw Exception(context.getString(R.string.MsgDataNoFound))
             }
@@ -42,6 +42,23 @@ class JobController {
         } catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgUpdate))
         }
+
+
+    }
+
+    fun removePerson(id: String){
+        try{
+            val result = Jobdata.getById(id)
+            if (result == null){
+                throw Exception(context
+                    .getString(R.string.MsgDataNoFound))
+            }
+            Jobdata.remove(id)
+        }catch (e: Exception){
+            throw Exception(context
+                .getString(R.string.ErrorMsgRemove))
+        }
+
     }
 
 }
