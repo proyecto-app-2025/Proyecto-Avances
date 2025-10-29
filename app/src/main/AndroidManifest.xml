@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoEmpleosCR">
         <activity
+            android:name=".item_job"
+            android:exported="false" />
+        <activity
+            android:name=".MainJobs"
+            android:exported="false" />
+        <activity
+            android:name=".MainPostJob"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

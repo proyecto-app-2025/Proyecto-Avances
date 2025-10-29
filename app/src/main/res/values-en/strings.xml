@@ -7,4 +7,16 @@
     <string name="ErrorMsgGetAll">Error when getting the all info</string>
     <string name="ErrorMsgGetById">Error when getting the specific ID</string>
     <string name="MsgDataNoFound">The data no found</string>
+    <string name="btnSeeJob">See employment</string>
+    <string name="btnPostJob">Post a job</string>
+    <string name="btnPublish">Publish</string>
+    <string name="textPosition">Position</string>
+    <string name="textCompany">Company</string>
+    <string name="textUbi">Location</string>
+    <string name="textModality">Modality</string>
+    <string name="textWorkDay">Work Day</string>
+    <string name="textDescription">Description</string>
+    <string name="textRequirements">Requirements</string>
+    <string name="textPhone">Phone</string>
+    <string name="textEmail">Email</string>
 </resources>

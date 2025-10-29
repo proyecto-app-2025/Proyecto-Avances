@@ -4,7 +4,7 @@ import Data.JobDataManager
 import Data.JobManager
 import Entity.Job
 import android.content.Context
-import cr.ac.utn.empleoscr.R
+import cr.ac.utn.proyectoempleoscr.R
 
 class JobController {
 

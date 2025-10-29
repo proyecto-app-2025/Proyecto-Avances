@@ -5,32 +5,25 @@ import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material3.Button
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.wear.compose.material.Button
 
-class MainActivity : AppCompatActivity() {
+class MainJobs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_jobs)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val btnSeeJobs = findViewById<Button>(R.id.btnSeeJob)
-        btnSeeJobs.setOnClickListener(View.OnClickListener{ view ->
-            Util.Util.openActivity(this, MainJobs::class.java)
+        val btnPost = findViewById<Button>(R.id.btnPublish)
+        btnPost.setOnClickListener(View.OnClickListener{ view ->
+            Util.Util.openActivity(this, MainPostJob::class.java)
         })
-
-        val btnPostaJobs = findViewById<Button>(R.id.btnPostJob)
-        btnPostaJobs.setOnClickListener(View.OnClickListener{ view ->
-            Util.Util.openActivity(this, MainJobs::class.java)
-        })
-
 
     }
+
 }
