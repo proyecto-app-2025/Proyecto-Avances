@@ -15,12 +15,26 @@
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:orientation="horizontal"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- ← Flecha back -->
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            app:tint="@android:color/black"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:contentDescription="Atrás" />
+
 
         <TextView
             android:id="@+id/txtTitulo"
@@ -81,7 +95,7 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtPuesto"
+                        android:id="@+id/inputPosition"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textCapSentences"
@@ -105,7 +119,7 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtEmpresa"
+                        android:id="@+id/inputCompany"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textCapWords"
@@ -129,7 +143,7 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtUbicacion"
+                        android:id="@+id/inputUbi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textCapWords"
@@ -153,7 +167,7 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtModalidad"
+                        android:id="@+id/inputModality"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textCapWords"
@@ -162,7 +176,7 @@
 
                 <!-- Jornada (dropdown) -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/inputJornada"
+                    android:id="@+id/Jornada"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -177,14 +191,14 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <AutoCompleteTextView
-                        android:id="@+id/dropdownJornada"
+                        android:id="@+id/inputJornada"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:inputType="none"
                         android:paddingStart="12dp"
                         android:paddingEnd="12dp"
-                        android:inputType="none"
                         android:textColor="@android:color/black"
-                        tools:text="Tiempo completo"/>
+                        tools:text="Tiempo completo" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Sección Detalles -->
@@ -201,7 +215,7 @@
 
                 <!-- Descripción -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/inputDescripcion"
+                    android:id="@+id/Description"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -215,22 +229,19 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtDescripcion"
+                        android:id="@+id/inputDescription"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:gravity="top|start"
                         android:inputType="textMultiLine"
                         android:maxLines="6"
                         android:padding="12dp"
-                        android:textColor="@android:color/black"
-                        tools:text="- Describir funciones principales
-- Indicar salario si aplica
-- Indicar horario"/>
+                        android:textColor="@android:color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Requisitos -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/inputRequisitos"
+                    android:id="@+id/Requirements"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -245,17 +256,14 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtRequisitos"
+                        android:id="@+id/inputRequisitos"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:gravity="top|start"
                         android:inputType="textMultiLine"
                         android:maxLines="6"
                         android:padding="12dp"
-                        android:textColor="@android:color/black"
-                        tools:text="- Bachillerato en ...
-- 1 año de experiencia ...
-- Disponibilidad inmediata"/>
+                        android:textColor="@android:color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Contacto -->
@@ -286,12 +294,11 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtTelefono"
+                        android:id="@+id/inputPhone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="phone"
-                        android:textColor="@android:color/black"
-                        tools:text="8888-8888"/>
+                        android:textColor="@android:color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Correo -->
@@ -311,13 +318,12 @@
                     app:boxCornerRadiusBottomEnd="6dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtCorreo"
+                        android:id="@+id/inputEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
                         android:autoLink="email"
-                        android:textColor="@android:color/black"
-                        tools:text="empresa@correo.com"/>
+                        android:textColor="@android:color/black"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Logo -->
@@ -355,8 +361,6 @@
                             android:id="@+id/iconCamera"
                             android:layout_width="28dp"
                             android:layout_height="28dp"
-                            android:src="@drawable/ic_camera_alt_black_24dp"
-                            android:tint="#666666"
                             android:contentDescription="Agregar imagen"/>
 
                         <TextView
@@ -381,9 +385,10 @@
 
                 <!-- espacio extra para que no choque con botones -->
                 <View
+                    android:id="@+id/space"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:layout_marginTop="24dp"/>
+                    android:layout_marginTop="24dp" />
 
             </LinearLayout>
         </ScrollView>

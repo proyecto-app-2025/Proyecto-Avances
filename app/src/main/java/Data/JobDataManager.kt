@@ -1,5 +1,7 @@
 package Data
 
+import Entity.Job
+
 object JobDataManager: JobManager {
 
     private var jobList = mutableListOf<Job>()
