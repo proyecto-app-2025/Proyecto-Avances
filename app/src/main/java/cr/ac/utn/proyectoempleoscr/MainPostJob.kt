@@ -3,6 +3,7 @@ package cr.ac.utn.proyectoempleoscr
 import Util.Util
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,5 +25,11 @@ class MainPostJob : AppCompatActivity() {
         btnVolver.setOnClickListener(View.OnClickListener { view ->
             Util.openActivity(this, MainJobs::class.java)
         })
+
+        val btnCanc = findViewById<Button>(R.id.btnCancelar)
+        btnCanc.setOnClickListener(View.OnClickListener { view ->
+            Util.openActivity(this, MainJobs::class.java)
+        })
+
     }
 }

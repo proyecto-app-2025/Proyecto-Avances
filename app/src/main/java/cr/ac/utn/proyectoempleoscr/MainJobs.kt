@@ -3,6 +3,7 @@ package cr.ac.utn.proyectoempleoscr
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -23,6 +24,13 @@ class MainJobs : AppCompatActivity() {
         btnPost.setOnClickListener(View.OnClickListener{ view ->
             Util.Util.openActivity(this, MainPostJob::class.java)
         })
+
+        val btnReturn = findViewById<ImageButton>(R.id.btnBack)
+        btnReturn.setOnClickListener(View.OnClickListener { view ->
+            Util.Util.openActivity(this, MainActivity::class.java)
+        })
+
+
 
     }
 

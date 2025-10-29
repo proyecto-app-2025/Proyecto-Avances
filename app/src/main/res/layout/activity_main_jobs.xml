@@ -21,6 +21,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            app:tint="@android:color/black"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:contentDescription="Atrás" />
+
         <!-- Buscador tipo caja con borde negro -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/searchLayout"
