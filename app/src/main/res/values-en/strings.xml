@@ -19,4 +19,7 @@
     <string name="textRequirements">Requirements</string>
     <string name="textPhone">Phone</string>
     <string name="textEmail">Email</string>
+    <string name="SuccessMessage">Published correctly</string>
+    <string name="ErrorMsg">Don´t published correctly</string>
+    <string name="CancelarMsg">Cancelled correctly</string>
 </resources>

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,5 +32,22 @@ class MainPostJob : AppCompatActivity() {
             Util.openActivity(this, MainJobs::class.java)
         })
 
+        val btnMessageSuccess = findViewById<Button>(R.id.btnPublish)
+        btnMessageSuccess.setOnClickListener(View.OnClickListener { view ->
+            Toast.makeText(this, getString(R.string.SuccessMessage),
+                Toast.LENGTH_SHORT).show()
+        })
+
+        /*val btnMessageError = findViewById<Button>(R.id.btnPublish)
+        btnMessageError.setOnClickListener(View.OnClickListener { view ->
+            Toast.makeText(this, getString(R.string.ErrorMessage),
+                Toast.LENGTH_SHORT).show()
+        }) */
+
+        /* val btnCancel = findViewById<Button>(R.id.btnCancelar)
+        btnCanc.setOnClickListener(View.OnClickListener { view ->
+            Toast.makeText(this, getString(R.string.CancelarMsg),
+                Toast.LENGTH_SHORT).show()
+        }) */
     }
 }

@@ -18,4 +18,7 @@
     <string name="textRequirements">Requisitos del empleo</string>
     <string name="textPhone">Teléfono</string>
     <string name="textEmail">Correo electrónico</string>
+    <string name="SuccessMessage">Publicado correctamente</string>
+    <string name="ErrorMsg">No se ha publicado correctamente</string>
+    <string name="CancelarMsg">Cancelado correctamente</string>
 </resources>
