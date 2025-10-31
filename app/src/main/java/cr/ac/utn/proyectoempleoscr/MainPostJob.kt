@@ -42,9 +42,9 @@ class MainPostJob : AppCompatActivity() {
         btnMessageError.setOnClickListener(View.OnClickListener { view ->
             Toast.makeText(this, getString(R.string.ErrorMessage),
                 Toast.LENGTH_SHORT).show()
-        }) */
+        })
 
-        /* val btnCancel = findViewById<Button>(R.id.btnCancelar)
+         val btnCancel = findViewById<Button>(R.id.btnCancelar)
         btnCanc.setOnClickListener(View.OnClickListener { view ->
             Toast.makeText(this, getString(R.string.CancelarMsg),
                 Toast.LENGTH_SHORT).show()

@@ -23,7 +23,6 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <!-- ← Flecha back -->
-
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="24dp"
