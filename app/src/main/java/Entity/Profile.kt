@@ -3,7 +3,7 @@ package Entity
 import android.graphics.Bitmap
 import java.time.LocalDate
 
-class Person() {
+class Profile() {
 
     private var id: String = ""
     private var name: String = ""

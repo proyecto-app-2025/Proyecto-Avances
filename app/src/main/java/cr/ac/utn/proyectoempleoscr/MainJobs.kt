@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.button.MaterialButton
 
 class MainJobs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +31,10 @@ class MainJobs : AppCompatActivity() {
             Util.Util.openActivity(this, MainActivity::class.java)
         })
 
+        val btnProfile = findViewById<MaterialButton>(R.id.btnCreateProfile)
+        btnProfile.setOnClickListener(View.OnClickListener { view ->
+            Util.Util.openActivity(this, ProfileActivity::class.java)
+        })
 
 
     }
