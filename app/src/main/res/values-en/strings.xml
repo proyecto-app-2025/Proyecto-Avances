@@ -22,4 +22,7 @@
     <string name="SuccessMessage">Published correctly</string>
     <string name="ErrorMsg">Don´t published correctly</string>
     <string name="CancelarMsg">Cancelled correctly</string>
+    <string name="TextYes">Yes</string>
+    <string name="TextNo">No</string>
+    <string name="TextTitleQuestion">Question</string>
 </resources>

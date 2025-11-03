@@ -21,4 +21,7 @@
     <string name="SuccessMessage">Publicado correctamente</string>
     <string name="ErrorMsg">No se ha publicado correctamente</string>
     <string name="CancelarMsg">Cancelado correctamente</string>
+    <string name="TextYes">Sí</string>
+    <string name="TextNo">No</string>
+    <string name="TextTitleQuestion">Pregunta</string>
 </resources>
