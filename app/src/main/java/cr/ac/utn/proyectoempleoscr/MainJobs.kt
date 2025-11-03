@@ -26,7 +26,7 @@ class MainJobs : AppCompatActivity() {
             Util.Util.openActivity(this, MainPostJob::class.java)
         })
 
-        val btnReturn = findViewById<ImageButton>(R.id.btnBack)
+        val btnReturn = findViewById<ImageButton>(R.id.btnVolver)
         btnReturn.setOnClickListener(View.OnClickListener { view ->
             Util.Util.openActivity(this, MainActivity::class.java)
         })

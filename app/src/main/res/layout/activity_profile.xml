@@ -10,7 +10,6 @@
     android:padding="16dp"
     tools:context=".ProfileActivity">
 
-
     <LinearLayout
         android:id="@+id/topBarProfile"
         android:layout_width="0dp"
@@ -22,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageButton
-            android:id="@+id/btnBack"
+            android:id="@+id/btnVolver"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="8dp"
@@ -38,7 +37,6 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
@@ -51,7 +49,6 @@
         app:layout_constraintTop_toBottomOf="@id/topBarProfile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
 
     <ScrollView
         android:id="@+id/scrollProfile"
@@ -79,10 +76,10 @@
                     android:id="@+id/cardPhoto"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:layout_marginEnd="12dp"
                     app:cardCornerRadius="40dp"
                     app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:layout_marginEnd="12dp">
+                    app:strokeWidth="1dp">
 
                     <ImageView
                         android:id="@+id/imgPhoto"
@@ -92,22 +89,12 @@
                         tools:src="@drawable/baseline_person_24"/>
                 </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnPickPhoto"
+                <!-- Botón (dejado tal cual lo pusiste, solo fuera de la Card) -->
+                <ImageButton
+                    android:id="@+id/btnSearch_profile"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Subir foto"
-                    android:textAllCaps="false"
-                    android:minWidth="0dp"
-                    android:paddingLeft="12dp"
-                    android:paddingRight="12dp"
-                    app:icon="@drawable/outline_add_a_photo_24"
-                    app:iconSize="18dp"
-                    app:iconTint="#000000"
-                    app:backgroundTint="@android:color/transparent"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    app:cornerRadius="20dp"/>
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
             </LinearLayout>
 
             <!-- Campos -->
@@ -122,7 +109,7 @@
                 app:boxStrokeWidth="1dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtId"
+                    android:id="@+id/TextID_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"/>
@@ -139,7 +126,7 @@
                 app:boxStrokeWidth="1dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtName"
+                    android:id="@+id/TextName_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"/>
@@ -156,7 +143,7 @@
                 app:boxStrokeWidth="1dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtFirstLast"
+                    android:id="@+id/TextFLastName_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"/>
@@ -173,7 +160,7 @@
                 app:boxStrokeWidth="1dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtSecondLast"
+                    android:id="@+id/TextSLastName_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"/>
@@ -190,7 +177,7 @@
                 app:boxStrokeWidth="1dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtEmail"
+                    android:id="@+id/TextEmail_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"/>
@@ -207,13 +194,13 @@
                 app:boxStrokeWidth="1dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtPhone"
+                    android:id="@+id/TextPhone_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Fecha de nacimiento (campo limpio, sin icono) -->
+            <!-- Fecha de nacimiento con end icon -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilBirthDate"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -222,16 +209,24 @@
                 android:layout_marginTop="8dp"
                 android:hint="Fecha de nacimiento"
                 app:boxStrokeColor="#000000"
-                app:boxStrokeWidth="1dp">
+                app:boxStrokeWidth="1dp"
+                app:endIconMode="custom"
+                app:endIconTint="#000000">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtBirthDate"
+                    android:id="@+id/TextBirthdate_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusable="false"
                     android:clickable="true"
-                    android:inputType="text"
-                    tools:text="1998-05-08"/>
+                    android:focusable="false"
+                    android:inputType="text" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Guardar -->

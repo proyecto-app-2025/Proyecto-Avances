@@ -24,7 +24,7 @@
 
         <!-- ← Flecha back -->
         <ImageButton
-            android:id="@+id/btnBack"
+            android:id="@+id/btnVolver"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="8dp"

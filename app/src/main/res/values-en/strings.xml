@@ -25,4 +25,11 @@
     <string name="TextYes">Yes</string>
     <string name="TextNo">No</string>
     <string name="TextTitleQuestion">Question</string>
+    <string name="MsgError">Error</string>
+    <string name="MsgDuplicateData">The data already exists</string>
+    <string name="MsgMissingData">Data is needed</string>
+    <string name="TextSaveQuestion">Are you sure to save the information?</string>
+    <string name="TextDeleteQuestion">Are you sure to delete the information?</string>
+    <string name="MsgSaveSuccess">The data was saved correctly</string>
+    <string name="MsgDeleteSuccess">The data was deleted correctly</string>
 </resources>

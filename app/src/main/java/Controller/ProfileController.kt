@@ -6,7 +6,7 @@ import Entity.Profile
 import android.content.Context
 import cr.ac.utn.proyectoempleoscr.R
 
-class PersonController {
+class ProfileController {
 
      private var profileDataManager: ProfileDataManager = PDataManager
     private lateinit var context: Context
@@ -15,7 +15,7 @@ class PersonController {
         this.context=context
     }
 
-    fun add(profile: Profile){
+    fun addProfile(profile: Profile){
         try {
             profileDataManager.add(profile)
         }catch (e: Exception){
@@ -23,7 +23,7 @@ class PersonController {
         }
     }
 
-    fun updatePerson(profile: Profile){
+    fun updateProfile(profile: Profile){
         try {
             profileDataManager.update(profile)
         }catch (e: Exception){
@@ -49,7 +49,7 @@ class PersonController {
         }
     }
 
-    fun removePerson(id: String){
+    fun removeProfile(id: String){
         try {
             val result = profileDataManager.getById(id)
             if (result == null){
