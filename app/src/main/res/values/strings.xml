@@ -6,4 +6,19 @@
     <string name="ErrorMsgGetAll">Error al obtener todo</string>
     <string name="ErrorMsgGetById">Error al obtener un ID específico</string>
     <string name="MsgDataNoFound">El dato no ha sido encontrado</string>
+    <string name="btnSeeJob">See employment</string>
+    <string name="btnPostJob">Post a job</string>
+    <string name="btnPublish">Publish</string>
+    <string name="textPosition">Puesto</string>
+    <string name="textCompany">Empresa</string>
+    <string name="textUbi">Ubicación</string>
+    <string name="textModality">Modalidad</string>
+    <string name="textWorkDay">Jornada Laboral</string>
+    <string name="textDescription">Descripción del empleo</string>
+    <string name="textRequirements">Requisitos del empleo</string>
+    <string name="textPhone">Teléfono</string>
+    <string name="textEmail">Correo electrónico</string>
+    <string name="SuccessMessage">Publicado correctamente</string>
+    <string name="ErrorMsg">No se ha publicado correctamente</string>
+    <string name="CancelarMsg">Cancelado correctamente</string>
 </resources>

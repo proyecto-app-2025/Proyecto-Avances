@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#000000"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@android:color/white">
+
+        <!-- Cuadro del logo de la empresa -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logoCard"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="4dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#000000"
+            app:cardBackgroundColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/txtLogoPlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Logo\nde la\nEmpresa"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    android:gravity="center" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Info del empleo -->
+        <LinearLayout
+            android:id="@+id/infoCol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/logoCard"
+            app:layout_constraintTop_toTopOf="@id/logoCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0">
+
+            <!-- Puesto -->
+            <TextView
+                android:id="@+id/txtTituloPuesto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desarrollador Android Jr."
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <!-- Empresa y ubicación -->
+            <TextView
+                android:id="@+id/txtEmpresaUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACME S.A · San José"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Modalidad y tipo de jornada -->
+            <TextView
+                android:id="@+id/txtModalidadJornada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Híbrido · Tiempo completo"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Resumen / requisitos cortos -->
+            <TextView
+                android:id="@+id/txtResumen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kotlin, 6-12 meses de experiencia"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Botón 'Ver más' en negro -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerMas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver más"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:minWidth="0dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#000000"
+            app:iconTint="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/logoCard"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
