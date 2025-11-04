@@ -80,36 +80,36 @@
             android:id="@+id/profileAction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_marginStart="8dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCreateProfile"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:contentDescription="Crear perfil"
                 android:minWidth="0dp"
                 android:minHeight="0dp"
-                android:contentDescription="Crear perfil"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="20dp"
                 app:icon="@drawable/baseline_person_add_24"
                 app:iconSize="25dp"
                 app:iconTint="#000000"
-                app:backgroundTint="@android:color/transparent"
                 app:strokeColor="#000000"
-                app:strokeWidth="1dp"
-                app:cornerRadius="20dp"/>
+                app:strokeWidth="1dp" />
 
             <TextView
                 android:id="@+id/lblCreateProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="Crear perfil"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:layout_marginTop="2dp"/>
+                android:textSize="10sp" />
         </LinearLayout>
     </LinearLayout>
 
