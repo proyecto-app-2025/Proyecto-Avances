@@ -13,23 +13,24 @@
     app:cardBackgroundColor="@android:color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:padding="12dp">
 
         <!-- Cuadro del logo de la empresa -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/logoCard"
             android:layout_width="72dp"
             android:layout_height="72dp"
-            app:cardUseCompatPadding="true"
-            app:cardCornerRadius="4dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="#000000"
             app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:strokeColor="#000000"
+            app:strokeWidth="1dp">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -40,10 +41,10 @@
                     android:id="@+id/txtLogoPlaceholder"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text="Logo\nde la\nEmpresa"
                     android:textColor="#666666"
-                    android:textSize="11sp"
-                    android:gravity="center" />
+                    android:textSize="11sp" />
             </FrameLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -52,12 +53,12 @@
             android:id="@+id/infoCol"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="12dp"
-            app:layout_constraintStart_toEndOf="@id/logoCard"
-            app:layout_constraintTop_toTopOf="@id/logoCard"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0">
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/logoCard"
+            app:layout_constraintTop_toTopOf="@id/logoCard">
 
             <!-- Puesto -->
             <TextView
@@ -66,38 +67,38 @@
                 android:layout_height="wrap_content"
                 android:text="Desarrollador Android Jr."
                 android:textColor="#000000"
-                android:textStyle="bold"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <!-- Empresa y ubicación -->
             <TextView
                 android:id="@+id/txtEmpresaUbicacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="ACME S.A · San José"
                 android:textColor="#000000"
-                android:textSize="13sp"
-                android:layout_marginTop="2dp" />
+                android:textSize="13sp" />
 
             <!-- Modalidad y tipo de jornada -->
             <TextView
                 android:id="@+id/txtModalidadJornada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="Híbrido · Tiempo completo"
                 android:textColor="#000000"
-                android:textSize="13sp"
-                android:layout_marginTop="2dp" />
+                android:textSize="13sp" />
 
             <!-- Resumen / requisitos cortos -->
             <TextView
                 android:id="@+id/txtResumen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="Kotlin, 6-12 meses de experiencia"
                 android:textColor="#000000"
-                android:textSize="13sp"
-                android:layout_marginTop="2dp" />
+                android:textSize="13sp" />
         </LinearLayout>
 
         <!-- Botón 'Ver más' en negro -->
@@ -105,15 +106,15 @@
             android:id="@+id/btnVerMas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ver más"
-            android:textAllCaps="false"
-            android:textSize="12sp"
             android:minWidth="0dp"
             android:paddingLeft="12dp"
-            android:paddingRight="12dp"
             android:paddingTop="4dp"
+            android:paddingRight="12dp"
             android:paddingBottom="4dp"
+            android:text="Ver más"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
+            android:textSize="12sp"
             app:backgroundTint="#000000"
             app:iconTint="@android:color/white"
             app:layout_constraintBottom_toBottomOf="@id/logoCard"
