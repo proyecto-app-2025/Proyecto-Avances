@@ -10,7 +10,7 @@
     android:padding="16dp"
     tools:context=".MainJobs">
 
-    <!-- FILA SUPERIOR: buscador + botón "+ Publicar" -->
+    <!-- FILA SUPERIOR: atrás + buscador + publicar + crear perfil -->
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="0dp"
@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageButton
-            android:id="@+id/btnBack"
+            android:id="@+id/btnVolver"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="8dp"
@@ -32,7 +32,7 @@
             android:src="@drawable/baseline_arrow_back_24"
             android:contentDescription="Atrás" />
 
-        <!-- Buscador tipo caja con borde negro -->
+        <!-- Buscador -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/searchLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -59,7 +59,7 @@
                 android:padding="8dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Botón + Publicar estilo outlined -->
+        <!-- Botón + Publicar -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPublish"
             android:layout_width="wrap_content"
@@ -74,9 +74,46 @@
             app:strokeColor="#000000"
             app:strokeWidth="1dp"
             app:backgroundTint="@android:color/transparent"/>
+
+        <!-- Acción Crear Perfil: botón circular + etiqueta debajo -->
+        <LinearLayout
+            android:id="@+id/profileAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreateProfile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Crear perfil"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/baseline_person_add_24"
+                app:iconSize="25dp"
+                app:iconTint="#000000"
+                app:strokeColor="#000000"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                android:id="@+id/lblCreateProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Crear perfil"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Título "Empleos" -->
+    <!-- Título -->
     <TextView
         android:id="@+id/txtTituloLista"
         android:layout_width="wrap_content"
@@ -90,7 +127,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Lista scrolleable de empleos -->
+    <!-- Lista de empleos -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerEmpleos"
         android:layout_width="0dp"

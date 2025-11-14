@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Contenido centrado -->
     <LinearLayout
         android:id="@+id/homeContent"
         android:layout_width="wrap_content"
@@ -20,55 +19,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.4">
 
-        <!-- Logo (blanco/negro) -->
-        <com.google.android.material.card.MaterialCardView
+       <com.google.android.material.card.MaterialCardView
             android:id="@+id/logoCard"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            app:cardUseCompatPadding="true"
-            app:cardCornerRadius="6dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="#000000">
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardUseCompatPadding="false"
+            app:cardCornerRadius="12dp"
+            app:strokeWidth="0dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent">
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white">
+                android:background="@android:color/transparent">
 
-                <TextView
+                <ImageView
+                    android:id="@+id/imgLogo"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="LOGO"
-                    android:textColor="#666666"
-                    android:textSize="13sp"
-                    android:gravity="center"/>
+                    android:layout_height="205dp"
+                    android:adjustViewBounds="true"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_empleoscr"/>
             </FrameLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Título -->
         <TextView
             android:id="@+id/txtTituloApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Empleos CR"
             android:textColor="#000000"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginTop="24dp"/>
 
-        <!-- Subtítulo (gris neutro) -->
         <TextView
             android:id="@+id/txtSubtitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Encuentra vacantes o\npublica un empleo"
-            android:textColor="#444444"
-            android:textSize="14sp"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="Encuentra vacantes o\npublica un empleo"
             android:textAlignment="center"
-            android:layout_marginTop="8dp"/>
+            android:textColor="#444444"
+            android:textSize="14sp" />
 
-        <!-- Botones -->
         <LinearLayout
             android:id="@+id/homeButtons"
             android:layout_width="wrap_content"
@@ -77,7 +73,6 @@
             android:gravity="center"
             android:layout_marginTop="32dp">
 
-            <!-- Botón outlined (negro) -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSeeJob"
                 android:layout_width="wrap_content"
@@ -92,7 +87,6 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"/>
 
-            <!-- Botón sólido (negro) -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnPostJob"
                 android:layout_width="wrap_content"
@@ -110,10 +104,3 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-

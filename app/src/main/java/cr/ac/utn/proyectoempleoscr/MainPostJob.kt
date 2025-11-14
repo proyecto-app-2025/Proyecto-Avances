@@ -22,7 +22,7 @@ class MainPostJob : AppCompatActivity() {
             insets
         }
 
-        val btnVolver = findViewById<ImageButton>(R.id.btnBack)
+        val btnVolver = findViewById<ImageButton>(R.id.btnVolver)
         btnVolver.setOnClickListener(View.OnClickListener { view ->
             Util.openActivity(this, MainJobs::class.java)
         })
