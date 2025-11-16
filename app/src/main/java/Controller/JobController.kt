@@ -6,59 +6,51 @@ import Entity.Job
 import android.content.Context
 import cr.ac.utn.proyectoempleoscr.R
 
-class JobController {
+class JobController(private val context: Context) {
 
-    private var Jobdata: JobManager = JobDataManager
+    private var jobData: JobManager = JobDataManager
 
-    private var context: Context
-
-    constructor(context: Context){
-        this.context=context
-    }
-
-    fun addJob(job: Job){
+    fun addJob(job: Job) {
         try {
-            Jobdata.add(job)
-        } catch (e: Exception){
+            jobData.add(job)
+        } catch (e: Exception) {
             throw Exception(context.getString(R.string.ErrorMsgAdd))
         }
     }
 
-    fun updateJob(job: Job){
+    fun updateJob(job: Job) {
         try {
-            Jobdata.update(job)
-        } catch (e: Exception){
+            jobData.update(job)
+        } catch (e: Exception) {
             throw Exception(context.getString(R.string.ErrorMsgUpdate))
         }
     }
 
-    fun getById(id: String): Job{
+    fun getById(id: String): Job? {
+        return try {
+            jobData.getById(id)
+        } catch (e: Exception) {
+            throw Exception(context.getString(R.string.ErrorMsgGetById))
+        }
+    }
+
+    fun getJobs(): List<Job> {
+        return try {
+            jobData.getAll()
+        } catch (e: Exception) {
+            throw Exception(context.getString(R.string.ErrorMsgGetAll))
+        }
+    }
+
+    fun removeJob(id: String) {
         try {
-            val result = Jobdata.getById(id)
-            if(result==null){
+            val result = jobData.getById(id)
+            if (result == null) {
                 throw Exception(context.getString(R.string.MsgDataNoFound))
             }
-            return result
-        } catch (e: Exception){
-            throw Exception(context.getString(R.string.ErrorMsgUpdate))
+            jobData.remove(id)
+        } catch (e: Exception) {
+            throw Exception(context.getString(R.string.ErrorMsgRemove))
         }
-
-
     }
-
-    fun removePerson(id: String){
-        try{
-            val result = Jobdata.getById(id)
-            if (result == null){
-                throw Exception(context
-                    .getString(R.string.MsgDataNoFound))
-            }
-            Jobdata.remove(id)
-        }catch (e: Exception){
-            throw Exception(context
-                .getString(R.string.ErrorMsgRemove))
-        }
-
-    }
-
 }

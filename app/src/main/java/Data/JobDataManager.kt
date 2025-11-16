@@ -22,6 +22,7 @@ object JobDataManager: JobManager {
         add(job)
     }
 
+
     //Get all the information
     override fun getAll()= jobList
 
