@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainJobs : AppCompatActivity(), JobListAdapter.OnJobClickListener {
+class JobListActivity : AppCompatActivity(), JobListAdapter.OnJobClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

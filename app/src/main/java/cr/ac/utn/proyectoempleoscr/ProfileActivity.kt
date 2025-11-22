@@ -176,7 +176,6 @@ class ProfileActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener 
     }
 
     private fun isValidationData(): Boolean {
-        val dateParsed = Util.parseStringToDateModern(TextBirthdate.text.toString(), "dd/MM/yyyy")
         val phoneOk = TextPhone.text?.trim()?.toString()?.toIntOrNull()?.let { it > 0 } == true
         return TextID.text?.trim()?.isNotEmpty() == true
                 && TextName.text?.trim()?.isNotEmpty() == true
@@ -185,7 +184,6 @@ class ProfileActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener 
                 && TextEmail.text?.trim()?.isNotEmpty() == true
                 && TextBirthdate.text?.trim()?.isNotEmpty() == true
                 && phoneOk
-                && dateParsed != null
     }
 
     private fun savePerson() {
@@ -204,8 +202,6 @@ class ProfileActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener 
                     SecondLastName = TextSLastName.text.toString()
                     Email = TextEmail.text.toString()
                     Phone = TextPhone.text.toString().toInt()
-                    val b = Util.parseStringToDateModern(TextBirthdate.text.toString(), "dd/MM/yyyy")!!
-                    BirthDate = LocalDate.of(b.year, b.month.value, b.dayOfMonth)
                 }
 
                 if (!IsEditMode)

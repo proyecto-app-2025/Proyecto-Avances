@@ -1,7 +1,7 @@
 package cr.ac.utn.proyectoempleoscr
 
 import Entity.Job
-import android.R
+//import android.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
