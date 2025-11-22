@@ -10,7 +10,6 @@
     android:padding="16dp"
     tools:context=".MainJobs">
 
-    <!-- FILA SUPERIOR: atrás + buscador + publicar + crear perfil -->
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="0dp"
@@ -32,7 +31,6 @@
             android:src="@drawable/baseline_arrow_back_24"
             android:contentDescription="Atrás" />
 
-        <!-- Buscador -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/searchLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -59,7 +57,6 @@
                 android:padding="8dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Botón + Publicar -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPublish"
             android:layout_width="wrap_content"
@@ -75,7 +72,6 @@
             app:strokeWidth="1dp"
             app:backgroundTint="@android:color/transparent"/>
 
-        <!-- Acción Crear Perfil: botón circular + etiqueta debajo -->
         <LinearLayout
             android:id="@+id/profileAction"
             android:layout_width="wrap_content"
@@ -113,7 +109,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Título -->
     <TextView
         android:id="@+id/txtTituloLista"
         android:layout_width="wrap_content"
@@ -127,7 +122,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Lista de empleos -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerEmpleos"
         android:layout_width="0dp"
@@ -136,7 +130,6 @@
         app:layout_constraintTop_toBottomOf="@id/txtTituloLista"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/activity_item_job" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

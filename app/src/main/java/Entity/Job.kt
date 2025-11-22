@@ -3,23 +3,30 @@ package Entity
 import android.graphics.Bitmap
 
 class Job {
-    private var id: String=""
-    private var puesto: String=""
-    private var nombreEmpresa: String=""
-    private var ubicacion: String=""
-    private var modalidad: String=""
-    private var jornadaLaboral: String=""
-    private var descripcion: String=""
-    private var requisitos: String=""
+    private var id: String = ""
+    private var puesto: String = ""
+    private var nombreEmpresa: String = ""
+    private var ubicacion: String = ""
+    private var modalidad: String = ""
+    private var jornadaLaboral: String = ""
+    private var descripcion: String = ""
+    private var requisitos: String = ""
     private lateinit var logoEmpresa: Bitmap
-    private var numeroTelefono: String=""
-    private var correo: String=""
+    private var numeroTelefono: String = ""
+    private var correo: String = ""
 
     constructor(
-        id: String, puesto: String, nombreEmpresa: String,
-        ubicacion: String, modalidad: String, jornadaLaboral: String,
-        descripcion: String, requisitos: String, logoEmpresa: Bitmap,   // obligatorio
-        numeroTelefono: String, correo: String
+        id: String,
+        puesto: String,
+        nombreEmpresa: String,
+        ubicacion: String,
+        modalidad: String,
+        jornadaLaboral: String,
+        descripcion: String,
+        requisitos: String,
+        logoEmpresa: Bitmap,
+        numeroTelefono: String,
+        correo: String
     ) {
         this.id = id
         this.puesto = puesto
@@ -32,12 +39,11 @@ class Job {
         this.logoEmpresa = logoEmpresa
         this.numeroTelefono = numeroTelefono
         this.correo = correo
-
     }
 
-    var ID : String
+    var ID: String
         get() = this.id
-        set(value) {this.id=value}
+        set(value) { this.id = value }
 
     var Puesto: String
         get() = this.puesto
